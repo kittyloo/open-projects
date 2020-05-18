@@ -1,1 +1,9 @@
-
+{
+  "name": "Enrollment Parser Service",
+  "version": "0.0.1",
+  "description": "Enrollment API",
+  "title": "Enrollment API",
+  "header": {
+		"title": "Enrollment API"
+	}
+}
