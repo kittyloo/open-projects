@@ -1,0 +1,16 @@
+=============================================
+About the Availity enrollment parser service: 
+=============================================
+It is maven project, and created using the Spring framework - Springboot module (version 1.4.0-RELEASE)
+Required JavaRuntime Environment: 1.8
+
+The project is packaged as a jar file located in the target directory.
+java -jar target/enrollment-parser-service-0.0.1.jar
+
+It contains the following Rest APIs:
+http://localhost:8000/api/enrollment/status
+http://localhost:8000/api/enrollment/parser?fileName=/Users/marikitangeles/Documents/enrollment-list-copy.csv
+
+API documentation is generated using apiDocJs.  
+Document Directory: doc/index.html
+Please visit http://apidocjs.com with the full documentation.
