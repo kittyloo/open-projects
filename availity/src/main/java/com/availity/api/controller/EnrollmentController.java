@@ -24,17 +24,24 @@ import com.availity.api.util.FileHelper;
  *
  */
 @RestController
-@RequestMapping("enrollment")
+@RequestMapping("api/enrollment")
 public class EnrollmentController {
 	
 	final Logger LOG = LoggerFactory.getLogger(EnrollmentController.class);
 	
 	/**
-	 * This method reads contents of the supplied csv file, and creates one zip file to download, 
+	 * @api {get} /api/enrollment/parser Load Reader
+	 * @apiVersion 0.0.1
+	 * @apiGroup Enrollment
+	 * @apiName LoadReader
+	 * @apiParam {String} filename The CSV file
+	 * @apiDescription This method reads contents of the supplied csv file, and creates one zip file to download, 
 	 * which contains the multiple files based on the different insurance providers.
 	 * If a file is not provided, it will use the sample csv file, by default (for demo purposes)
 	 * 
-	 * @param response
+	 * @apiExample Example usage:
+	 * 		http://localhost:8000/api/enrollment/parser?fileName=/Users/marikitangeles/Documents/enrollment-list-copy.csv
+	 * @apiSuccess {application/zip} The Zip file (parsedData.zip)
 	 * @return
 	 */
 	@RequestMapping(value = "/parser", method = RequestMethod.GET, produces="application/zip")
@@ -70,7 +77,13 @@ public class EnrollmentController {
     }
 
 	/**
-	 * This method is a sample api
+	 * @api {get} /api/enrollment/status Get Status
+	 * @apiVersion 0.0.1
+	 * @apiGroup Enrollment
+	 * @apiName GetStatus
+	 * @apiDescription This method is a sample api, and returns a success status
+	 * @apiExample Example usage:
+	 * 		http://localhost:8000/api/enrollment/status
 	 * @return
 	 */
 	@RequestMapping(value = "/status", method = RequestMethod.GET)
